@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  
+  app:
+    image: mcr.microsoft.com/devcontainers/python:dev-3.12-bookworm
+    command: tail -f /dev/null
+    volumes:
+      - .:/workspace:cached
