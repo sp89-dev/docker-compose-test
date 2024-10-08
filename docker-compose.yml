@@ -7,3 +7,10 @@ services:
     command: tail -f /dev/null
     volumes:
       - .:/workspace:cached
+
+  db:
+    image: mysql:8.3.0
+    container_name: mymysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: password
